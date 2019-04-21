@@ -1,9 +1,28 @@
 import React from 'react'
+import PostList from './PostList'
+import Navigation from './navigation';
+import FormRecipe from'./FormRecipe'
 
-const App = () => {
+class App extends React.Component{
+  render(){
   return (
-    <h1>React development has begun!</h1>
-  )
+    <div>
+      <Navigation /><br/>
+
+      <div>
+        <FormRecipe/>
+      </div>
+
+      <div>
+        <PostList/>
+      </div>
+  
+  
+      
+      
+    </div>
+    )
+  }
 }
 
 export default App

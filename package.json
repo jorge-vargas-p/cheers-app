@@ -10,8 +10,9 @@
     "client": "webpack-dev-server --hot --inline",
     "dev": "node server & webpack --watch",
     "server": "node server",
-    "start": "webpack && node server",
-    "test": "jest --watchAll"
+    "start": "node server",
+    "test": "jest --watchAll",
+    "build": "webpack --watch"
   },
   "babel": {
     "presets": [
@@ -30,6 +31,8 @@
   },
   "dependencies": {
     "express": "^4.16.4",
+    "fs": "0.0.1-security",
+    "react-bootstrap": "^1.0.0-beta.8",
     "superagent": "^5.0.2"
   },
   "devDependencies": {
