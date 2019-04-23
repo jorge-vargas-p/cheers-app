@@ -52,7 +52,7 @@ class FormRecipe extends React.Component {
               type="text"
               name="ingredients"
               className="form-control"
-              value={this.state.Ingredients}
+              value={this.state.ingredients}
               onChange={this.handleInputChange}
               placeholder="Ingredients"
               />
@@ -67,18 +67,7 @@ class FormRecipe extends React.Component {
               placeholder="Preparation"
               />
           </div>
-          {/* <div className="form-group">
-            <select
-                name="priority"
-                className="form-control"
-                value={this.state.priority}
-                onChange={this.handleInputChange}
-              >
-              <option>low</option>
-              <option>medium</option>
-              <option>high</option>
-            </select>
-          </div> */}
+          
           <button type="submit" className="btn btn-primary">
             Save
           </button>

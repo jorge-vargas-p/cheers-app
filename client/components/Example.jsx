@@ -1,6 +1,8 @@
 import React from 'react'
 import PostData from '../../server/public/recipes.json'
 import {Button, Overlay} from 'react-bootstrap'
+import PostList from './PostList'
+
 class Example extends React.Component {
     constructor(...args) {
       super(...args);

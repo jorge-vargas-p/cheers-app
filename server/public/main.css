@@ -30,3 +30,14 @@ body {
    background: linear-gradient(to right, #A83279, #D38312); /* W3C, IE 10+/ Edge, Firefox 16+, Chrome 26+, Opera 12+, Safari 7+ */
    border: 1px solid black;
  }
+
+ 
+.col-mt-3{
+   width: auto;
+}
+
+
+.flexy{
+   display: flex;
+   flex-wrap: wrap;
+}
