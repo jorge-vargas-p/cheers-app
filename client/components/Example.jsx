@@ -1,5 +1,5 @@
 import React from 'react'
-
+import PostData from '../../server/public/recipes.json'
 import {Button, Overlay} from 'react-bootstrap'
 class Example extends React.Component {
     constructor(...args) {
@@ -8,6 +8,8 @@ class Example extends React.Component {
       this.attachRef = target => this.setState({ target });
       this.state = {
         show: false,
+        
+        
       };
     }
   
@@ -34,7 +36,9 @@ class Example extends React.Component {
                 ...props.style,
               }}
             >
-              Simple tooltip
+              <span className='badge badge-pill badge-light ml-2'>
+                  { PostData.recipes.length }
+              </span>
             </div>
           )}
         </Overlay>

@@ -5,9 +5,9 @@ class FormRecipe extends React.Component {
     super();
     this.state = {
       name: '',
-      responsible: '',
+      ingredients: '',
       description: '',
-      // priority: 'low'
+      
     };
     this.handleInputChange = this.handleInputChange.bind(this);
     this.handleSubmit = this.handleSubmit.bind(this);
@@ -15,12 +15,12 @@ class FormRecipe extends React.Component {
 
   handleSubmit(e) {
     e.preventDefault();
-    this.props.onAddTodo(this.state);
+    this.props.onAddRecipe(this.state);
     this.setState({
-      title: '',
-      responsible: '',
+      name: '',
+      ingredients: '',
       description: '',
-      // priority: 'low'
+      
     });
   }
 
@@ -41,6 +41,7 @@ class FormRecipe extends React.Component {
               type="text"
               name="name"
               className="form-control"
+              
               value={this.state.name}
               onChange={this.handleInputChange}
               placeholder="Cocktail-Name"
@@ -49,7 +50,7 @@ class FormRecipe extends React.Component {
           <div className="form-group">
             <input
               type="text"
-              name="Ingredients"
+              name="ingredients"
               className="form-control"
               value={this.state.Ingredients}
               onChange={this.handleInputChange}

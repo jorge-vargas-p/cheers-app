@@ -1,28 +1,37 @@
 import React from 'react'
-import PostData from '../../server/public/recipes.json'
+
 
 class PostList extends React.Component{
     render(){
-        console.log(PostData)
+        console.log(this.props)
     return (
-      <div>
-        <h1>Hello!!</h1>
-        {PostData.recipes.map((postDetail, index) =>
-        <div>
-            <h1>
-                {postDetail.cocktail}
-            </h1>
-            <p>
-                {postDetail.ingredients}
-            </p>
+        
+    <div><h1 align="center"> Your Cocktails!!</h1>
+    <br></br>
+        
+      <div className="col-lg-4">
+        
+        {this.props.recipes.map((postDetail, index) =>
+        <div className="col-mt-3">
+        
+            <div className="card-header">
+                <h1>
+                    {postDetail.cocktail}
+                </h1>
+            </div>
+        
+            <div className="card-body">
+                <p> 
+                    {postDetail.ingredients}
+                </p>
+            </div>
         </div>    
             )
-        }
-    
-    
-        
+        }      
         
       </div>
+      </div>     
+
       )
     }
   }
